@@ -1,1 +1,27 @@
+1.引入CSS文件,创建CSS
 
+  外部样式表
+  <link type="text/css" rel="stylesheet" href="mycss.css">
+  
+  内部样式表
+  <style>
+    h2 {color: red}
+  </style>
+  
+  内联样式表
+  <span style="color:red">
+  
+  优先级(高到低）：内敛样式表 内部样式表 外部样式表
+  
+2.语法
+
+  选择器分组
+  h1,h2,h3,h4 { color: red }
+  
+  继承机制
+  body {color: red},其子元素p,td,ul,ol全部为绿色
+  
+  派生选择器（注意元素的上下文关系）
+  li strong{ color: red;}
+  <p><strong>我是黑色，因为我不在li元素内，所以这个规则对我无效</strong></p>
+  <li><strong>我是黑色，因为我在li元素内，所以这个规则对我有效</strong></li>
